@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BulletController : MonoBehaviour
@@ -10,10 +11,18 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        StartCoroutine(LifeTime(5));
     }
 
     void FixedUpdate()
     {
         rb.velocity =  transform.forward * speed;
+    }
+
+    IEnumerator LifeTime(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        GameObject.Destroy(gameObject);
     }
 }
