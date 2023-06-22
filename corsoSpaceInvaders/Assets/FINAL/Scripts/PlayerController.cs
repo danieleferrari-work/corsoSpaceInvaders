@@ -1,9 +1,23 @@
+using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-   [SerializeField] float speed;
-   [SerializeField] BulletController bulletPrefab;
+    [SerializeField] int life = 3;
+    [SerializeField] float speed;
+    [SerializeField] BulletController bulletPrefab;
+    [SerializeField] TMP_Text lifeText;
+
+    UIManager uiManager;
+
+
+    private void Start()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+
+        UpdateLifeText();
+    }
 
     void Update()
     {
@@ -25,5 +39,41 @@ public class PlayerController : MonoBehaviour
 
         bullet.transform.position = gameObject.transform.position;
         bullet.transform.LookAt(transform.forward);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        BulletController bullet = other.gameObject.GetComponentInParent<BulletController>();
+        bool isEnemyBullet = bullet.tag == Const.Tags.Enemy;
+
+        if (isEnemyBullet && bullet != null)
+        {
+            GameObject.Destroy(bullet.gameObject);
+            TakeDamage();
+        }
+    }
+
+    void TakeDamage()
+    {
+        life--;
+
+        UpdateLifeText();
+
+        if (life <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    void UpdateLifeText()
+    {
+        lifeText.text = life.ToString();
+    }
+
+    void GameOver()
+    {
+        GameObject.Destroy(gameObject);
+
+        uiManager.OnGameOver();
     }
 }

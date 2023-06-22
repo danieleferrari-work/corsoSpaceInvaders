@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DefenceController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
+        BulletController bullet = other.gameObject.GetComponentInParent<BulletController>();
+        bool isEnemyBullet = bullet.tag == Const.Tags.Enemy;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (bullet != null)
+        {
+            Destroy(bullet.gameObject);
+
+            if (isEnemyBullet)
+                Destroy(gameObject);
+        }
     }
 }
