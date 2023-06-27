@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e732ba13ef94e46a98ad824655d0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1
+  fireRate: 10
   bulletPrefab: {fileID: 3067937388350032263, guid: b7ba59935abfcba43a681e1d1ab09648, type: 3}
   enemies: []
 --- !u!1001 &1155123090
