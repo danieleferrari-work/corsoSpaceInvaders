@@ -7,7 +7,7 @@ public class EnemiesShootController : MonoBehaviour
 {
 
     [Tooltip("Number of bullets per second")]
-    [SerializeField] float fireRate;
+    [SerializeField] float fireRate = 1;
     [SerializeField] GameObject bulletPrefab;
 
     private float fireDelay;
