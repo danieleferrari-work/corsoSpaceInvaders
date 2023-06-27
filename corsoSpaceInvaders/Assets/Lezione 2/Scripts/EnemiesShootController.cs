@@ -35,15 +35,18 @@ public class EnemiesShootController : MonoBehaviour
         {
             yield return new WaitForSeconds(fireDelay);
 
-            // parte 1
-            // il proiettile viene spawnato nella posizione del nemico ma come figlio del nemico
-            // questo significa che anche il proiettile si muoverà con il nemico
-            GameObject.Instantiate(bulletPrefab, GetRandomEnemy().transform);
+            // // parte 1
+            // // il proiettile viene spawnato nella posizione del nemico ma come figlio del nemico
+            // // questo significa che anche il proiettile si muoverà con il nemico
+            // GameObject.Instantiate(bulletPrefab, GetRandomEnemy().transform);
 
-            // //  parte 2
-            // // in questo modo il proiettile viene spawnato nella root ma poi spostato nella posizione del nemico
-            // var bullet = GameObject.Instantiate(bulletPrefab);
-            // bullet.transform.position = GetRandomEnemy().transform.position;
+            //  parte 2
+            // in questo modo il proiettile viene spawnato nella root ma poi spostato nella posizione del nemico
+            // quindi non si muoverà più insieme ai nemici
+            var bullet = GameObject.Instantiate(bulletPrefab);
+            bullet.transform.position = GetRandomEnemy().transform.position;
+            // far vedere senza riga sotto per spiegare differenza
+            bullet.transform.forward = transform.forward;
         }
     }
 }
