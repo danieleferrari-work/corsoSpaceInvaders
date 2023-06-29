@@ -1,9 +1,12 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
     [SerializeField] int life = 3;
+
+    [SerializeField] TMP_Text lifeText;
 
 
     void Update()
@@ -15,6 +18,8 @@ public class PlayerController : MonoBehaviour
             h * movementSpeed,
             0,
             v * movementSpeed);
+        
+        UpdateLifeText();
     }
 
     // // parte 1
@@ -31,8 +36,14 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log($"Trigger enter with {other.gameObject.name}");
         life--;
+        UpdateLifeText();
 
         if (life == 0)
             Debug.LogWarning("GAME OVER");
+    }
+
+    void UpdateLifeText()
+    {
+        lifeText.text = life.ToString();
     }
 }
