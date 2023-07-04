@@ -3713,7 +3713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2029197391
 Transform:
   m_ObjectHideFlags: 0
@@ -3997,38 +3997,6 @@ PrefabInstance:
     - target: {fileID: 7536932343657488267, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010902436950296556, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_fontSize
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010902436950296556, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_margin.y
-      value: -4.219412
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010902436950296556, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010902436950296556, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182995046842733336, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182995046842733336, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182995046842733336, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182995046842733336, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
