@@ -112,6 +112,50 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7212436347722529359, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212436348297856247, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212436351124587337, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213078680902990181, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: NoiseModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398106674221854313, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410330489828750199, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8687278608750108539, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
       propertyPath: m_RootOrder
       value: 0

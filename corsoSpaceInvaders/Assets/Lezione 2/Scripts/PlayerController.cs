@@ -3,10 +3,13 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Attributes")]
     [SerializeField] float movementSpeed;
     [SerializeField] int life = 3;
 
+    [Header("References")]
     [SerializeField] TMP_Text lifeText;
+    [SerializeField] ParticleSystem explosionParticle;
 
 
     void Update()
@@ -18,7 +21,7 @@ public class PlayerController : MonoBehaviour
             h * movementSpeed,
             0,
             v * movementSpeed);
-        
+
         UpdateLifeText();
     }
 
@@ -39,11 +42,17 @@ public class PlayerController : MonoBehaviour
         UpdateLifeText();
 
         if (life == 0)
-            Debug.LogWarning("GAME OVER");
+            GameOver();
     }
 
     void UpdateLifeText()
     {
         lifeText.text = life.ToString();
+    }
+
+    void GameOver()
+    {
+        Debug.LogWarning("GAME OVER");
+        explosionParticle.gameObject.SetActive(true);
     }
 }

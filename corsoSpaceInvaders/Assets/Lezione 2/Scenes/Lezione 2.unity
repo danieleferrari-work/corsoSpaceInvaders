@@ -3942,6 +3942,18 @@ PrefabInstance:
       propertyPath: speed
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3014285717056689625, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127115425025118567, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127115425025118567, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3852556236368793196, guid: 5bef70967b63a5b45bb8973a3594d9cc, type: 3}
       propertyPath: m_Name
       value: Player
