@@ -37,12 +37,15 @@ public class PlayerController : MonoBehaviour
     // perchè il bullet è Trigger
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Trigger enter with {other.gameObject.name}");
-        life--;
-        UpdateLifeText();
+        if (other.CompareTag(Const.Tags.Enemy))
+        {
+            Debug.Log($"Trigger enter with {other.gameObject.name}");
+            life--;
+            UpdateLifeText();
 
-        if (life == 0)
-            GameOver();
+            if (life == 0)
+                GameOver();
+        }
     }
 
     void UpdateLifeText()
