@@ -90,6 +90,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8656538077257873167, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4473358635460707045, guid: a4830e44787699a49a51516f0dd032b2, type: 3}
       propertyPath: m_Name
       value: BulletPlayer

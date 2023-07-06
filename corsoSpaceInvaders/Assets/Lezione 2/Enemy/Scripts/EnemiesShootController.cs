@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemiesShootController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class EnemiesShootController : MonoBehaviour
 
     private float fireDelay;
     public List<EnemyController> enemies = new List<EnemyController>();
+    public UnityEvent<EnemyController> onEnemyDestroyed;
 
 
     void Start()
@@ -20,6 +22,8 @@ public class EnemiesShootController : MonoBehaviour
         enemies = GetComponentsInChildren<EnemyController>().ToList();
 
         StartCoroutine(ShootCoroutine());
+
+        onEnemyDestroyed.AddListener(OnEnemyDestroyed);
     }
 
     EnemyController GetRandomEnemy()
@@ -48,5 +52,13 @@ public class EnemiesShootController : MonoBehaviour
             // far vedere senza riga sotto per spiegare differenza
             bullet.transform.forward = transform.forward;
         }
+    }
+
+    private void OnEnemyDestroyed(EnemyController enemy)
+    {
+        enemies.Remove(enemy);
+
+        if (!enemies.Any())
+            FindObjectOfType<GameManager>().YouWin();
     }
 }

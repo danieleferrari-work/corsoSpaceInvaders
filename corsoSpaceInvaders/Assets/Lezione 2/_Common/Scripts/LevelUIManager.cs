@@ -19,4 +19,9 @@ public class LevelUIManager : MonoBehaviour
         EditorApplication.ExitPlaymode();
 #endif
     }
+
+    public void OnClickButtonContinue()
+    {
+        SceneManager.LoadScene(Const.Scenes.Level1);
+    }
 }
