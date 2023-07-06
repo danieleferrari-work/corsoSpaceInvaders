@@ -54,5 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.LogWarning("GAME OVER");
         explosionParticle.gameObject.SetActive(true);
+
+        GameObject.FindObjectOfType<GameManager>().GameOver();
     }
 }
